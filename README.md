@@ -5,6 +5,7 @@
 Accent Colour Creator (ACC-Ksu) is an android app which lets you set any colour as the system accent. 
 
 **Note** - This is a fork of [ACC](https://github.com/Akilesh-T/ACC) with KSU support,if you need magisk support use the original one
+
 **Features**
 
 * You can set the accent using: 
