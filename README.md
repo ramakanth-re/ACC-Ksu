@@ -1,4 +1,4 @@
-# Acc-Ksu
+# ACC-Ksu
 
 **Accent Colour Creator**  
 
