@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name">Accent Colour Creator</string>
+    <string name="app_name_short">ACC</string>
+    <string name="color_custom">Benutzerdefinierte Farbe</string>
+    <string name="set_custom_color">Tippen zum Erstellen einer benutzerdefinierten Farbe</string>
+    <string name="color_name">Name der Akzentfarbe</string>
+    <string name="color_wallpaper">Farben aus Hintergrundbild</string>
+    <string name="created_accents">Akzente erstellt</string>
+    <string name="presets">Voreingestellte Farben</string>
+    <string name="set_preset_color">Tippen um fertige Farben zu verwenden</string>
+    <string name="set_wallpaper_color">Tippen um Farben aus dem Hintergrundbild zu verwenden</string>
+    <string name="general_header">Allgemein</string>
+    <string name="display_title">Dunkles Design</string>
+    <string name="accents_header">Akzente</string>
+    <string name="separate_accents_title">Separate Akzente</string>
+    <string name="create_new">Neu</string>
+    <string name="previous">Zurück</string>
+    <string name="next">Weiter</string>
+    <string name="light">Hell</string>
+    <string name="dark">Dunkel</string>
+    <string name="info">Info</string>
+    <string name="separate_accent_summary_off">Die aktuelle Akzentfarbe wird für das helle und das dunkele Design genutzt.</string>
+    <string name="separate_accent_summary_on">Helles und dunkeles Design nutzen verschieden Akzente</string>
+    <string name="hue">Farbton</string>
+    <string name="saturation">Sättigung</string>
+    <string name="lightness">Leichtigkeit</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="settings_app_update">App Update</string>
+    <string name="settings_check_for_updates">Suche nach Updates</string>
+    <string name="dl_and_install">Herunterladen &amp; Installieren</string>
+    <string name="tweak">Farben optimieren</string>
+    <string name="tweak_summary">Erlaubt das ändern vom Farbton, der Sättigung und der Helligkeit beim Erstellen einer Farbe</string>
+    <string name="picker_title_text">Wähle deinen Akzent</string>
+    <string name="picker_title_text_light">Wähle deinen Akzent für das helle Design</string>
+    <string name="picker_title_text_dark">Wähle deinen Akzent für das dunkele Design</string>
+
+    <string name="amber">Bernstein</string>
+    <string name="title_blue">Blau</string>
+    <string name="blue_grey">Blaugrau</string>
+    <string name="brown">Braun</string>
+    <!--
+        unused translation cause i dont know a german word for this color
+        <string name="candy_red">Candy Red</string> 
+    -->
+    <string name="cyan">Türkis</string>
+    <string name="deep_orange">Dunkelorange</string>
+    <string name="deep_purple">Dunkelviolett</string>
+    <string name="elegant_green">Elegant Grün</string>    
+    <string name="extended_green">Neongrün</string>
+    <string name="grey">Grau</string>
+    <string name="indigo">Indigoblau</string>
+    <string name="jade_green">Jade Grün</string>
+    <string name="light_blue">Hellblau</string>
+    <string name="light_green">Hellgrün</string>
+    <string name="lime">Limettengrün</string>
+    <!--
+        unused translation cause its the same word
+        <string name="orange">Orange</string>
+    -->
+    <string name="pale_blue">Blass-Blau</string>
+    <string name="pale_red">Blass-Rot</string>
+    <!--
+        unused translation cause its the same word
+        <string name="pink">Pink</string>
+    -->
+    <string name="title_red">Rot</string>
+    <string name="teal">Blaugrün</string>
+    <string name="yellove">Gelb</string>
+    <string name="wallpaper_primary">Hintergrundbild primär</string>
+    <string name="wallpaer_secondary">Hintergrundbild sekundär</string>
+    <string name="wallpaper_tertiary">Hintergrundbild tertiär</string>
+    <string name="about_title_desc">By Akilesh</string>
+    <!--
+        same word in german / no translation needed
+        <string name="version">Version</string>    
+        <string name="links">Links</string>
+        <string name="github">Github repo</string>
+        <string name="downloads">Downloads</string>
+        <string name="github_releases">Github releases</string>
+    -->
+    <string name="telegram_group">Telegram Gruppe</string>
+    <string name="xda_thread">XDA Beitrag</string>
+
+    <string name="telegram_channel">Telegram Kanal (enthält Beta-Versionen)</string>
+    <string name="toast_light_theme_not_selected">Keine Akzentfarbe für das helle Design gewählt</string>
+    <string name="toast_color_not_selected">Akzentfarbe nicht gewählt</string>
+    <string name="toast_name_not_set">Name fehlt!</string>
+    <string name="read_storage_permission_rationale">Es werden Dateiberechtigung benötigt um die Farben aus dem Hintergrundbild abzurufen.</string>
+    <!--
+        "%s" in the below 3 strings is a placeholder for the accent name set by the user
+    -->
+    <string name="accent_created">%s erstellt</string>
+    <string name="accent_removed">%s gelöscht</string>
+    <string name="oos_accent_set">%s aktiviert</string>
+
+    <string name="no_root_access_title">Fehlende Superuser Rechte</string>
+    <string name="no_root_access_message">Bitte beachte:\n1. Dein Gerät ist gerootet mit Magisk\n2. ACC werden Superuser-Rechte gewährt</string>
+    <string name="magisk_not_detected">Magisk nicht gefunden!</string>
+    <string name="exit">Beenden</string>
+    <string name="error">Erstellen fehlgeschlagen</string>
+    <string name="backup_restore">Sichern und wiederherstellen</string>
+    <string name="backup_restore_summary">Sichere deine Einstellungen und stelle sie bei Bedarf wiederher</string>
+    <string name="restore">Wiederherstellen</string>
+    <string name="local_backups">Gefundene Sicherungen</string>
+    <string name="hex_code">Hex code</string>
+    <string name="backup_deleted">Backup gelöscht</string>
+    <string name="backup_created">Backup erstellt!</string>
+    <string name="accents_restored">Akzente wiederhergestellt!</string>
+    <string name="brand_colors">Brand colors</string>
+    <string name="adobe">Adobe</string>
+    <string name="airbnb">Airbnb</string>
+    <string name="alienware">Alienware</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="amazon">Amazon</string>
+    <string name="android">Android</string>
+    <string name="archLinux">Arch Linux</string>
+    <string name="att">AT&amp;T</string>
+    <string name="cadbury">Cadbury</string>
+    <string name="cocacola">Coca-Cola</string>
+    <string name="debian">Debian</string>
+    <string name="dell">Dell</string>
+    <string name="discord">Discord</string>
+    <string name="fb">Facebook</string>
+    <string name="feedly">Feedly</string>
+    <string name="ferrari">Ferrari</string>
+    <string name="firefox">Firefox</string>
+    <string name="google_blue">Google blue</string>
+    <string name="google_green">Google green</string>
+    <string name="google_yellow">Google yellow</string>
+    <string name="google_red">Google red</string>
+    <string name="instagram">Instagram</string>
+    <string name="lamborghini">Lamborghini</string>
+    <string name="nokia">Nokia</string>
+    <string name="oneplus">OnePlus</string>
+    <string name="playStation">PlayStation</string>
+    <string name="razer">Razer</string>
+    <string name="samsung">Samsung</string>
+    <string name="spotify">Spotify</string>
+    <string name="t_mobile">T-Mobile</string>
+    <string name="telegram">Telegram</string>
+    <string name="tesla">Tesla</string>
+    <string name="twitter">Twitter</string>
+    <string name="ubuntu">Ubuntu</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="xda">XDA Developers</string>
+    <string name="windows">Windows</string>
+    <string name="color_rename">Umbenennen</string>
+    <string name="backup_contents">Sicherungsinhalt</string>
+    <string name="version">Version %s</string>
+    <string name="dark_mode_on">An</string>
+    <string name="dark_mode_off">Aus</string>
+    <string name="dark_mode_set_by_battery_saver">Bei Energiesparmodus</string>
+    <string name="dark_mode_system_default">Systemstandard</string>
+    <string name="create_backup">Backup</string>
+    <string name="edit">Edit</string>
+    <string name="write_storage_permission_rationale">Storage permission is required to save the new update</string>
+    <string name="pref_accent">Follow system accent</string>
+    <string name="pref_accent_on">Using default app colours</string>
+    <string name="pref_accent_off">Using system accent colour</string>
+    <string name="create_all">Create multiple accents</string>
+    <string name="create_all_summary">Create multiple brand, preset and wallpaper colours at once</string>
+    <string name="select_all">Select all</string>
+    <string name="deselect_all">Deselect all</string>
+    <string name="create_selected">Create selected accents</string>
+    <string name="accents_created">Accents created</string>
+    <string name="restoring_accents">Restoring accents</string>
+    <string name="empty_backup">Extracted backup is empty</string>
+    <string name="uninstalling">Uninstalling %s</string>
+    <string name="creating">Creating %s</string>
+    <string name="error_restoring">Couldn\'t restore accents</string>
+    <string name="view_backup_contents">View contents (%d)</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="invert_selection">Invert selection</string>
+    <string name="reboot">Reboot</string>
+    <string name="purple">Purple</string>
+    <string name="md_colors">Material Design colour palette</string>
+    <string name="title_green">Green</string>
+    <string name="Files">Files</string>
+    <string name="backup_folder">Backups</string>
+    <string name="update_folder">Updates</string>
+    <string name="auto_backup_title">Backup automatically</string>
+    <string name="backup_interval_summary">Set the interval(in days) between automatic backups</string>
+    <string name="auto_backup_summary_off">Automatic backup is disabled</string>
+    <string name="delete_old_summary_on">Old backups which were created automatically will be deleted before a new one is created</string>
+    <string name="delete_old_summary_off">Old backups which were created automatically will not be deleted</string>
+    <string name="daily_accent_title">Daily random accents</string>
+    <string name="daily_accent_summary">A random accent will be enabled every morning</string>
+    <plurals name="auto_backup_summary_on">
+        <item quantity="one">Accents will be backed up daily</item>
+        <item quantity="other">Accents will be backed up once in every %d days</item>
+    </plurals>
+
+</resources>

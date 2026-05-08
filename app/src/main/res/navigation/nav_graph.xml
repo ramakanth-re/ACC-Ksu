@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="app.akilesh.qacc.ui.home.HomeFragment"
+        tools:layout="@layout/home_fragment">
+
+        <argument
+            android:name="lightAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="darkAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="accentName"
+            app:argType="string" />
+
+        <argument
+            android:name="from_home"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/edit"
+            app:destination="@id/customisation"
+            app:enterAnim="@anim/fragment_enter"
+            app:popEnterAnim="@anim/fragment_enter_pop"
+            app:exitAnim="@anim/fragment_exit"
+            app:popExitAnim="@anim/fragment_exit_pop">
+
+            <argument
+                android:name="lightAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722" />
+
+            <argument
+                android:name="darkAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722" />
+
+            <argument
+                android:name="accentName"
+                app:argType="string"
+                android:defaultValue="Custom" />
+
+            <argument
+                android:name="from_home"
+                app:argType="boolean"
+                android:defaultValue="true"/>
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="app.akilesh.qacc.ui.preferences.SettingsFragment" />
+
+    <fragment
+        android:id="@+id/info"
+        android:name="app.akilesh.qacc.ui.info.InfoFragment" />
+
+    <fragment
+        android:id="@+id/color_picker"
+        android:name="app.akilesh.qacc.ui.colorpicker.ColorPickerFragment"
+        tools:layout="@layout/color_picker_fragment">
+
+        <argument
+            android:name="lightAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="accentName"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_dark"
+            app:destination="@+id/dark_accent"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+            <argument
+                android:name="lightAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722"/>
+        </action>
+
+        <action
+            android:id="@+id/to_customise"
+            app:destination="@+id/customisation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+            <argument
+                android:name="lightAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722"/>
+
+            <argument
+                android:name="accentName"
+                app:argType="string"
+                android:defaultValue="Custom" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dark_accent"
+        android:name="app.akilesh.qacc.ui.colorpicker.DarkColorPickerFragment"
+        tools:layout="@layout/color_picker_fragment">
+
+        <argument
+            android:name="lightAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="darkAccent"
+            app:argType="string"
+            android:defaultValue="#FF5722"/>
+
+        <argument
+            android:name="accentName"
+            app:argType="string"
+            android:defaultValue="Custom" />
+
+        <action
+            android:id="@+id/to_customise"
+            app:destination="@+id/customisation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+            <argument
+                android:name="lightAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722" />
+
+            <argument
+                android:name="darkAccent"
+                app:argType="string"
+                android:defaultValue="#FF5722" />
+
+            <argument
+                android:name="accentName"
+                app:argType="string"
+                android:defaultValue="Custom" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/customisation"
+        android:name="app.akilesh.qacc.ui.customisation.ColorCustomisationFragment"
+        tools:layout="@layout/color_customisation_fragment">
+
+        <argument
+            android:name="lightAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="darkAccent"
+            app:argType="string" />
+
+        <argument
+            android:name="accentName"
+            app:argType="string" />
+
+        <argument
+            android:name="from_home"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+
+        <action
+            android:id="@+id/reset"
+            app:destination="@id/customisation"
+            app:enterAnim="@anim/fragment_enter"
+            app:popEnterAnim="@anim/fragment_enter_pop"
+            app:exitAnim="@anim/fragment_exit"
+            app:popExitAnim="@anim/fragment_exit_pop">
+
+            <argument
+                android:name="lightAccent"
+                app:argType="string" />
+
+            <argument
+                android:name="darkAccent"
+                app:argType="string" />
+
+            <argument
+                android:name="accentName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/backup_fragment"
+        android:name="app.akilesh.qacc.ui.backup.BackupRestoreFragment"
+        tools:layout="@layout/backup_restore_fragment" />
+        
+    <fragment
+    	android:id="@+id/create_all_fragment"
+    	android:name="app.akilesh.qacc.ui.createmultiple.CreateAllFragment"
+    	tools:layout="@layout/create_all_fragment"
+     />
+
+    <action android:id="@+id/action_global_home"
+        app:popUpTo="@id/home"
+        app:destination="@id/home"
+        app:enterAnim="@anim/fragment_enter"
+        app:exitAnim="@anim/fragment_exit"
+        app:popEnterAnim="@anim/fragment_enter_pop"
+        app:popExitAnim="@anim/fragment_exit_pop"/>
+
+</navigation>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/color_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/light_accent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/color_name"
+            app:layout_constraintEnd_toEndOf="@id/color_name"
+            app:layout_constraintTop_toBottomOf="@id/color_name"
+            app:layout_constraintBottom_toTopOf="@id/dark_accent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:drawableStart="@drawable/ic_palette_24dp"
+            android:drawablePadding="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dark_accent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/light_accent"
+            app:layout_constraintEnd_toEndOf="@id/light_accent"
+            app:layout_constraintStart_toStartOf="@id/light_accent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:drawableStart="@drawable/ic_outline_nights_stay"
+            android:drawablePadding="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
