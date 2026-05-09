@@ -133,26 +133,30 @@ class HomeFragment: Fragment() {
         if (missingAccents.isNotEmpty()) {
             Log.w("Missing in db", missingAccents.toString())
             missingAccents.forEach { pkgName ->
-                val packageInfo = requireContext().packageManager.getPackageInfo(pkgName, 0)
-                val applicationInfo = packageInfo.applicationInfo ?: return@forEach
-                val accentName =
-                    requireContext().packageManager.getApplicationLabel(applicationInfo).toString()
-                val resources = requireContext().packageManager.getResourcesForApplication(applicationInfo)
-                val accentLightId =
-                    resources.getIdentifier("accent_device_default_light", "color", pkgName)
-                val accentDarkId =
-                    resources.getIdentifier("accent_device_default_dark", "color", pkgName)
-                if (accentLightId != 0 && accentDarkId != 0) {
-                    val colorLight = resources.getColor(accentLightId, null)
-                    val colorDark = resources.getColor(accentDarkId, null)
-                    val accent = Accent(
-                        pkgName,
-                        accentName,
-                        toHex(colorLight),
-                        toHex(colorDark)
-                    )
-                    Log.d("Inserting accent", accent.toString())
-                    accentViewModel.insert(accent)
+                try {
+                    val packageInfo = requireContext().packageManager.getPackageInfo(pkgName, 0)
+                    val applicationInfo = packageInfo.applicationInfo ?: return@forEach
+                    val accentName =
+                        requireContext().packageManager.getApplicationLabel(applicationInfo).toString()
+                    val resources = requireContext().packageManager.getResourcesForApplication(applicationInfo)
+                    val accentLightId =
+                        resources.getIdentifier("accent_device_default_light", "color", pkgName)
+                    val accentDarkId =
+                        resources.getIdentifier("accent_device_default_dark", "color", pkgName)
+                    if (accentLightId != 0 && accentDarkId != 0) {
+                        val colorLight = resources.getColor(accentLightId, null)
+                        val colorDark = resources.getColor(accentDarkId, null)
+                        val accent = Accent(
+                            pkgName,
+                            accentName,
+                            toHex(colorLight),
+                            toHex(colorDark)
+                        )
+                        Log.d("Inserting accent", accent.toString())
+                        accentViewModel.insert(accent)
+                    }
+                } catch (e: android.content.pm.PackageManager.NameNotFoundException) {
+                    Log.w("insertMissing", "Package $pkgName not found, skipping")
                 }
             }
         }
