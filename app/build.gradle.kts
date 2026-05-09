@@ -14,8 +14,8 @@ android {
         applicationId = "app.akilesh.qacc"
         minSdk = 26
         targetSdk = 34
-        versionCode = 13
-        versionName = "1.90"
+        versionCode = 14
+        versionName = "1.91"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
