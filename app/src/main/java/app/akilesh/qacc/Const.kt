@@ -6,6 +6,7 @@ import android.os.Build.VERSION_CODES.Q
 import android.os.Environment.DIRECTORY_DOCUMENTS
 import android.os.Environment.DIRECTORY_DOWNLOADS
 import app.akilesh.qacc.model.Colour
+import com.topjohnwu.superuser.Shell
 import java.io.File
 
 object Const {
@@ -429,7 +430,12 @@ object Const {
 
     const val prefix = "com.android.theme.color.custom."
 
-    const val busyBox = "/data/adb/ksu/bin/busybox"
+    val busyBox: String
+        get() = if (Shell.su("[ -f /data/adb/ksu/bin/busybox ]").exec().isSuccess) {
+            "/data/adb/ksu/bin/busybox"
+        } else {
+            "/data/adb/magisk/busybox"
+        }
 
     var selected = setOf<Colour>()
 

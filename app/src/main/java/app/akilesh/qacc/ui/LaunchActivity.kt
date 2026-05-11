@@ -13,16 +13,10 @@ class LaunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Try to get root access
         Shell.su().exec()
 
         if (!Shell.rootAccess()) {
             Log.e("ACC-SU", "Unable to get root access")
-            /* Possible scenarios:
-             * The user might not have granted access
-             * User manually denied access in Magisk manager
-             * Device is not rooted
-             */
             MaterialAlertDialogBuilder(this)
                 .setTitle(getString(R.string.no_root_access_title))
                 .setMessage(getString(R.string.no_root_access_message))
@@ -34,8 +28,7 @@ class LaunchActivity : AppCompatActivity() {
                 .show()
         }
         else {
-            //Detect Magisk
-            val result = Shell.su("[ -d /data/adb/ksu ]").exec()
+            val result = Shell.su("[ -d /data/adb/ksu ] || [ -d /data/adb/magisk ]").exec()
             if (result.isSuccess) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
